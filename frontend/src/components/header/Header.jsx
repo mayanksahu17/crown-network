@@ -145,6 +145,7 @@ const Header = ({ loginCSS, signupCSS, navColor, light }) => {
         <CountdownTimer />
       </div> */}
     </header>
+    
   );
 };
 

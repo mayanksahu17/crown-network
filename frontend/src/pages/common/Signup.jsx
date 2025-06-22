@@ -221,7 +221,7 @@ function Signup() {
           confirmPassword: "",
           acceptTerms: false,
         });
-        toast.success("Welcome to Crown Bankers! Check your email for credentials.");
+        toast.success("Welcome to Crown Network! Check your email for credentials.");
         navigate("/login");
       }
     } catch (error) {
@@ -244,13 +244,13 @@ function Signup() {
       <div className="flex-grow flex bg-gray-900">
         {/* Left Column - Form */}
         <div className="w-full md:w-1/2 flex flex-col items-center justify-center md:mx-24">
-          <div className="mt-1">
+          {/* <div className="mt-1">
             <img
               className="h-24 w-auto"
               src="/assets/logo1.png"
-              alt="Crown Bankers Logo"
+              alt="Crown Network Logo"
             />
-          </div>
+          </div> */}
           
           <div className="w-full max-w-lg px-6">
             <form

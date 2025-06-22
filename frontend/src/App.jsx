@@ -67,19 +67,21 @@ function App() {
     <>
       <Routes>
         <Route path="login" element={<Login />} />
+                <Route path="/" element={<Login />} />
+
         <Route path="signup" element={<Signup />} />
         <Route path="reset-password" element={<ResetPassword />} />
 
         <Route exact path="signup/:sponsorId/:position" element={<Signup />} />
         <Route element={<Layout />}>
-          <Route
+          {/* <Route
             path="/"
             element={
               <Smoothscrolls>
                 <Home_05 />
               </Smoothscrolls>
             }
-          />
+          /> */}
           <Route
             exact
             path="login-to-user-dashboard/:userid"

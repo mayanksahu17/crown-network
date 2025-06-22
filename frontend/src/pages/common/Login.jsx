@@ -127,22 +127,21 @@ const Login = () => {
         <div
           className="w-full items-center justify-center md:w-1/2 flex flex-col p-8 md:p-16"
         >
-          <div className="mb-8 ml-2">
+          {/* <div className="mb-8 ml-2">
             <div className="flex items-center">
                 <img
               className="h-24 sm:h-28 md:h-32 lg:h-36 w-auto"
               src="/assets/logo1.png"
-              alt="Crown Bankers Logo"
+              alt="Crown Network Logo"
             />
 
-              {/* <span className="ml-2 text-2xl font-bold text-white">BankCo</span> */}
             </div>
-          </div>
+          </div> */}
 
           <div className="flex-grow flex flex-col px-4 rounded-md justify-center max-w-md border border-green-800 animate-">
             <div className="p-4 rounded-t-md">
               <h2 className="text-3xl font-bold text-white">
-                Sign in to Crown Bankers.
+                Sign in to Crown Network.
               </h2>
             </div>
 

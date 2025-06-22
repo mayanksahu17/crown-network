@@ -7,8 +7,8 @@ import {
 } from "../../../assets";
 export const packageData = [
   {
-    name: "Solar Mini",
-    image: "https://res.cloudinary.com/dcqnkr06e/image/upload/v1748244435/15_ulseqo.png",
+    name: "",
+    image: "https://res.cloudinary.com/dwyyrm9xw/image/upload/v1750576169/p5_xvf0p2.png",
     minAmount: 10,
     maxAmount: 10,
     description:
@@ -18,8 +18,8 @@ export const packageData = [
     id: 5,
   },
   {
-    name: "Solar Starter",
-    image: "https://res.cloudinary.com/dcqnkr06e/image/upload/v1748244435/1_ava9sx.png",
+    name: "",
+    image: "https://res.cloudinary.com/dwyyrm9xw/image/upload/v1750576169/3_dfcjtu.png",
     minAmount: 25,
     maxAmount: 2499,
     description: "Get started with our entry-level investment package.",
@@ -28,8 +28,8 @@ export const packageData = [
     id: 1,  
   },
   {
-    name: "Power Growth",
-    image: "https://res.cloudinary.com/dcqnkr06e/image/upload/v1748244435/2_vgpgwd.png",
+    name: "",
+    image: "https://res.cloudinary.com/dwyyrm9xw/image/upload/v1750576169/p1_fv6pxh.png",
     minAmount: 2500,
     maxAmount: 19999,
     description:
@@ -39,8 +39,8 @@ export const packageData = [
     id: 2,
   },
   {
-    name: "Elite Energy",
-    image: "https://res.cloudinary.com/dcqnkr06e/image/upload/v1748244435/3_boigjn.png",
+    name: "",
+    image: "https://res.cloudinary.com/dwyyrm9xw/image/upload/v1750576169/p2_psmi7v.png",
     minAmount: 20000,
     maxAmount: 50000,
     description:
@@ -48,6 +48,17 @@ export const packageData = [
     dailyReturns: "2.1%",
     durationInDays: 130,
     id: 3,
+  },
+  {
+    name: "",
+    image: "https://res.cloudinary.com/dwyyrm9xw/image/upload/v1750576169/p2_psmi7v.png",
+    minAmount: 20000,
+    maxAmount: 50000,
+    description:
+      "Take your investments to the next level with our professional package.",
+    dailyReturns: "2.1%",
+    durationInDays: 180,
+    id: 4,
   },
 
 ];

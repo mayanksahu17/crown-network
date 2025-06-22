@@ -312,10 +312,10 @@ export default function NowPayment({ data }) {
           </Button>
         </div>
       </Modal>
-      <div className="mt-10 flex w-full justify-center mb-20 sm:mb-0">
+      <div className="mt-10 flex w-full justify-center mb-20 sm:mb-0 ">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-20 lg:gap-4 w-full max-w-full lg:max-w-[80%]">
           {packageData?.map((el, index) => (
-            <div key={index} className="w-full h-[80%]">
+            <div key={index} className="w-full h-[80%] bg-orange-400">
               <img
                 src={el?.image}
                 alt="Package Image"

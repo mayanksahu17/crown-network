@@ -348,7 +348,7 @@ export default function Investment({ data }) {
   {/* Mobile View: Vertical Cards */}
   <div className="space-y-6 md:hidden">
     {packageData.map((pkg, index) => (
-      <div key={index} className="bg-white dark:bg-gray-800 rounded-lg shadow-lg p-4 text-center">
+      <div key={index} className="bg-gray-800 dark:bg-gray-800 rounded-lg shadow-lg p-4 text-center">
         <img
           src={pkg.image}
           alt={pkg.name}
@@ -373,7 +373,7 @@ export default function Investment({ data }) {
   {/* Desktop View: Horizontal Cards with Larger Images and Narrower Buttons */}
   <div className="hidden md:flex justify-between gap-6">
     {packageData.map((pkg, index) => (
-      <div key={index} className="w-1/3 bg-white dark:bg-gray-800 rounded-lg shadow-lg p-6 text-center relative">
+      <div key={index} className="w-1/3 bg-gray-800 dark:bg-gray-800 rounded-lg shadow-lg p-6 text-center relative">
         <img
           src={pkg.image}
           alt={pkg.name}

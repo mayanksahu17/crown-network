@@ -24,18 +24,18 @@ export default function Sidebar({ isOpen, toggleSidebar }) {
       {/* Header */}
       <div className="flex items-center justify-between p-4 border-b border-gray-200 dark:border-gray-700">
         <div className="flex items-center">
-        <div className="w-16 h-16 rounded-xl bg-gray-100 dark:bg-gray-700 flex items-center justify-center">
+        {/* <div className="w-16 h-16 rounded-xl bg-gray-100 dark:bg-gray-700 flex items-center justify-center">
   <img
     src="/assets/logo1.png"
     alt="Logo"
     className="w-16 h-16 object-contain"
     onClick={() => navigate("/")}
   />
-</div>
+</div> */}
 
           {isOpen && (
             <h1 className="ml-3 text-lg font-semibold text-gray-800 dark:text-white">
-              Crown Bankers
+              Crown Network
             </h1>
           )}
         </div>

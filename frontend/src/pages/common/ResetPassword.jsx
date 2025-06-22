@@ -87,11 +87,11 @@ const ResetPassword = () => {
               <img
               className="h-24 sm:h-28 md:h-32 lg:h-36 w-auto"
               src="/assets/logo1.png"
-              alt="Crown Bankers Logo"
+              alt="Crown Network Logo"
             />
           </a>
           <a href="/">
-            <div className="font-bold text-white text-4xl">Crown Bankers</div>
+            <div className="font-bold text-white text-4xl">Crown Network</div>
           </a>
         </div>
         <div className="block rounded-lg bg-gray-900 px-[30px] py-[50px] text-left sm:px-10">

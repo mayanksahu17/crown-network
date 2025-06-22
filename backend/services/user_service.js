@@ -72,7 +72,7 @@ module.exports = {
     u.security_pin,
     w.interest_wallet AS interest, w.referral_binary_wallet AS rnb,w.roi_wallet as roi,
     GROUP_CONCAT(DISTINCT  p.package_name) AS packages,
-    CASE WHEN u.referrer_id = 'CROWN-100012' THEN 'Crown Bankers' ELSE s.name END AS sponsorName,
+    CASE WHEN u.referrer_id = 'CROWN-100012' THEN 'Crown Network' ELSE s.name END AS sponsorName,
     CASE WHEN u.referrer_id = 'CROWN-100012' THEN 'crownbankers@gmail.com' ELSE s.email END AS sponsorEmail,
         COALESCE(SUM(i.invested_amount), 0) AS totalInvestment
 
@@ -111,7 +111,7 @@ getAllUserData: async () => {
   u.security_pin,
   w.interest_wallet AS interest, w.referral_binary_wallet AS rnb,w.roi_wallet as roi,
   GROUP_CONCAT(DISTINCT  p.package_name) AS packages,
-  CASE WHEN u.referrer_id = 'CROWN-100012' THEN 'Crown Bankers' ELSE s.name END AS sponsorName,
+  CASE WHEN u.referrer_id = 'CROWN-100012' THEN 'Crown Network' ELSE s.name END AS sponsorName,
   CASE WHEN u.referrer_id = 'CROWN-100012' THEN 'crownbankers@gmail.com' ELSE s.email END AS sponsorEmail,
   COALESCE(SUM(i.invested_amount), 0) AS totalInvestment,
   -- Add funded field: true if user has any 'free' type investment

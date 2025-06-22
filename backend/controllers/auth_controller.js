@@ -109,11 +109,11 @@ module.exports = {
         pin: securityPin,
       };
       await userService.verifyUser(newUser);
-      await emailService.sendCommonElasticMail({
-        to: email,
-        template: "credentials",
-        variables,
-      });
+      // await emailService.sendCommonElasticMail({
+      //   to: email,
+      //   template: "credentials",
+      //   variables,
+      // });
       res.status(201).json({ data: { userId: newUser }, success: true });
     } catch (error) {
       console.log(error);
