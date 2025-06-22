@@ -7,37 +7,6 @@ export function cn(...inputs) {
   return twMerge(clsx(inputs));
 }
 
-/**
- * Format a date with optional formatting options
- */
-export function formatDate(date, options = {}) {
-  const defaultOptions = {
-    year: "numeric",
-    month: "short",
-    day: "numeric",
-    ...options,
-  };
-
-  const dateObj = typeof date === "string" ? new Date(date) : date;
-
-  return new Intl.DateTimeFormat("en-US", defaultOptions).format(dateObj);
-}
-
-/**
- * Format a number as currency
- */
-export function formatCurrency(amount, options = {}) {
-  const defaultOptions = {
-    style: "currency",
-    currency: "USD",
-    minimumFractionDigits: 2,
-    maximumFractionDigits: 2,
-    ...options,
-  };
-
-  return new Intl.NumberFormat("en-US", defaultOptions).format(amount);
-}
-
 const Card = React.forwardRef<
   HTMLDivElement,
   React.HTMLAttributes<HTMLDivElement>
