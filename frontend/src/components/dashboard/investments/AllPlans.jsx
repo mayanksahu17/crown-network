@@ -11,7 +11,7 @@ import { customStyles, packageData } from "./data";
 import investmentService from "../../../services/investmentService";
 import axios from "axios";
 import { tokens } from "../../../constants/tokens";
-
+import { baseURL } from "../../../constants/baseURL";
 export default function Investment({ data }) {
   const { user } = useAuth();
 
@@ -42,7 +42,7 @@ export default function Investment({ data }) {
     // Direct hardcoded API call for this service
     return axios.post(
       // `http://localhost:5001/api/payment/create_transaction`,
-      `https://crownbankers.com/api/payment/create_transaction`,
+      `${baseURL}/payment/create_transaction`,
       {
         ...data,
         email: user?.user?.email,

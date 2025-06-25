@@ -159,6 +159,7 @@ module.exports = {
       const packageData = await packages_master_service.getPackageById(
         coinPaymentData?.package_id
       );
+      console.log("package data", packageData);
       if (
         parseFloat(coinPaymentData?.invested_amount) <
           parseFloat(packageData?.min_amount) ||
