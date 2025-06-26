@@ -13,9 +13,9 @@ export const packageData = [
     maxAmount: 10,
     description:
       "Take your investments to the next level with our professional package.",
-    dailyReturns: "1.2%",
-    durationInDays: 110,
-    id: 5,
+    dailyReturns: "2.0%",
+    durationInDays: 180,
+    id: 1,
   },
   {
     name: "",
@@ -23,9 +23,9 @@ export const packageData = [
     minAmount: 25,
     maxAmount: 2499,
     description: "Get started with our entry-level investment package.",
-    dailyReturns: "1.5%",
-    durationInDays: 150,
-    id: 1,  
+    dailyReturns: "2.0%",
+    durationInDays: 180,
+    id: 2,  
   },
   {
     name: "",
@@ -34,19 +34,8 @@ export const packageData = [
     maxAmount: 19999,
     description:
       "Experience steady growth with our mid-tier investment package.",
-    dailyReturns: "1.8%",
-    durationInDays: 140,
-    id: 2,
-  },
-  {
-    name: "",
-    image: "https://res.cloudinary.com/dwyyrm9xw/image/upload/v1750576169/p2_psmi7v.png",
-    minAmount: 20000,
-    maxAmount: 50000,
-    description:
-      "Take your investments to the next level with our professional package.",
-    dailyReturns: "2.1%",
-    durationInDays: 130,
+    dailyReturns: "2.0%",
+    durationInDays: 180,
     id: 3,
   },
   {
@@ -56,9 +45,20 @@ export const packageData = [
     maxAmount: 50000,
     description:
       "Take your investments to the next level with our professional package.",
-    dailyReturns: "2.1%",
+    dailyReturns: "2.0%",
     durationInDays: 180,
     id: 4,
+  },
+  {
+    name: "",
+    image: "https://res.cloudinary.com/dwyyrm9xw/image/upload/v1750576169/p2_psmi7v.png",
+    minAmount: 60000,
+    maxAmount: 500000,
+    description:
+      "Take your investments to the next level with our professional package.",
+    dailyReturns: "2.0%",
+    durationInDays: 180,
+    id: 5,
   },
 
 ];
