@@ -42,16 +42,21 @@ module.exports = {
     });
   },
   sendCommonElasticMail: async ({ to, template, variables }) => {
+    // schema of this variable
+    // const variables = {
+    //     userId,
+    //     otp,
+    //   };
     return new Promise(async (resolve, reject) => {
       try {
         let defaultClient = ElasticEmail.ApiClient.instance;
 
         let apikey = defaultClient.authentications["apikey"];
         apikey.apiKey =
-          "EB75FFC7853B2A477DF387FC194DB6D44889D5FA2D7EE7D004209FA679272C16FB4CEE95A640F01ED1F6EA9D7C2E0890";
+          "78F8E4D6F4844346A91B1E6B628E505078E53951722CD35976BF38A33F4B1471BA66F1754E8D7EB66E469155B0317A27";
 
         let api = new ElasticEmail.EmailsApi();
-
+        console.log("Sending email to:", to, "with template:", template);
         let email = ElasticEmail.EmailMessageData.constructFromObject({
           Recipients: [new ElasticEmail.EmailRecipient(to)],
           Content: {
@@ -61,11 +66,13 @@ module.exports = {
                 Content: "My test email content ;)",
               }),
             ],
-            From: "info@crownbankers.com",
-            TemplateName: template,
+            From: "official@crownnetwork.online",
+            // TemplateName: template,
+            TemplateName: "otp",
             Merge: variables,
           },
         });
+        console.log("Email object created:", email);
 
         var callback = function (error, data, response) {
           if (error) {
@@ -76,7 +83,10 @@ module.exports = {
             resolve(response);
           }
         };
+        console.log("Sending email using ElasticEmail API...");
         api.emailsPost(email, callback);
+
+
       } catch (error) {
         reject(error);
       }

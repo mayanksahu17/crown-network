@@ -42,7 +42,7 @@ export default function Investment({ data }) {
     // Direct hardcoded API call for this service
     return axios.post(
       // `http://localhost:5001/api/payment/create_transaction`,
-      `${baseURL}/payment/create_transaction`,
+      `${baseURL}/nowpayment/create_transaction`,
       {
         ...data,
         email: user?.user?.email,
@@ -93,7 +93,8 @@ export default function Investment({ data }) {
       console.log(data);
       const res = await createInvestment(user, data);
       if (res.status === 200) {
-        const checkoutUrl = res?.data?.data.checkout_url;
+        console.log(res?.data?.data.invoice_url);
+        const checkoutUrl = res?.data?.data.invoice_url;
         setAllData({
           amount: 0,
           isOpenModal: false,
@@ -112,8 +113,14 @@ export default function Investment({ data }) {
           isInvestmentSubmitting: false,
           selectedToken: null,
         });
+        
         if (checkoutUrl) {
-          window.open(checkoutUrl, "_blank");
+          // open after async call, using simulated click
+          const a = document.createElement("a");
+          a.href = checkoutUrl;
+          a.target = "_blank";
+          a.rel = "noopener noreferrer";
+          a.click();
         }
       }
     } catch (error) {

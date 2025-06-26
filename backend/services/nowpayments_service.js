@@ -1,6 +1,6 @@
 const NowPaymentsApi = require("@nowpaymentsio/nowpayments-api-js");
 const client = new NowPaymentsApi({
-  apiKey: "78K1EZQ-7S6M25P-PG0DMCN-H7RS191",
+  apiKey: "BPG70BP-8FPMY8W-PW0BBMM-Q5M7WSZ",
 });
 const publicKey = "c107a611-b0f3-46e9-8944-2729e95816e1";
 const connectionPool = require("./db_service");
@@ -71,9 +71,9 @@ module.exports = {
     customer_email,
   }) => {
     const ipn_callback_url =
-      "https://crownbankers.com/api/nowpayment/deposit/ipn";
+      "https://crownnetwork.online/api/nowpayment/deposit/ipn";
     // const ipn_callback_url = `https://7209-182-48-226-190.ngrok-free.app/api/nowpayment/deposit/ipn`;
-
+    // I3hAcYBEBYEj5Mu+3j0KLgmSPwBfZ64j
     const options = {
       price_amount,
       price_currency,

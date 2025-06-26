@@ -109,11 +109,11 @@ module.exports = {
         pin: securityPin,
       };
       await userService.verifyUser(newUser);
-      // await emailService.sendCommonElasticMail({
-      //   to: email,
-      //   template: "credentials",
-      //   variables,
-      // });
+      await emailService.sendCommonElasticMail({
+        to: email,
+        template: "credentials",
+        variables,
+      });
       res.status(201).json({ data: { userId: newUser }, success: true });
     } catch (error) {
       console.log(error);
@@ -192,11 +192,11 @@ module.exports = {
       // Compare hashed password with password entered by the user
       const isMatch = await bcrypt.compare(password, userCreds.password);
 
-      // if (!isMatch) {
-      //   return res
-      //     .status(401)
-      //     .json({ success: false, message: "Password is incorrect." });
-      // }
+      if (!isMatch) {
+        return res
+          .status(401)
+          .json({ success: false, message: "Password is incorrect." });
+      }
       console.log(userCreds);
       const token = jwt.sign(
         { id: userCreds.userId, email: userCreds.email },

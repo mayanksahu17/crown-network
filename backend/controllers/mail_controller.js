@@ -89,6 +89,9 @@ module.exports = {
         variables,
       });
 
+      console.log(`OTP sent to ${user?.email}: ${otp}`);
+      
+
       return res
         .status(200)
         .json({ success: true, message: "OTP sent successfully", otp: "1234" });

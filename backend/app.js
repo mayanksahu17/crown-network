@@ -17,25 +17,6 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 app.use("/output", express.static(path.join(__dirname, "output")));
 app.use(cors());
-// block requests from Goa
-// block requests from Goa
-
-// app.use((req, res, next) => {
-//   const forwarded = req.headers['x-forwarded-for'];
-//   const ip = forwarded ? forwarded.split(',')[0].trim() : req.connection.remoteAddress;
-
-//   const geo = geoip.lookup(ip);
-
-//   console.log(`[GeoIP] IP: ${ip}, Geo Info: ${JSON.stringify(geo)}`);
-
-//   if (geo && geo.country === 'IN' && geo.region === 'GA') {
-//     console.log("Blocked access from Goa");
-//     return res.status(403).send('Access denied from your region.');
-//   }
- 
-
-//   next();
-// });
 
 
 
